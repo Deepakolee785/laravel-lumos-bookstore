@@ -1,6 +1,35 @@
 <?php
 
+
 use Illuminate\Support\Str;
+
+$dbHost = env('DB_HOST', '127.0.0.1');
+$dbPort = env('DB_PORT', '5432');
+$dbName = env('DB_DATABASE', 'forge');
+$dbUser = env('DB_USERNAME', 'forge');
+$dbPassword = env('DB_PASSWORD', '');
+
+if (env('DATABASE_URL')) {
+    $databaseUrl = parse_url(env('DATABASE_URL'));
+
+    $dbHost = $databaseUrl['host'];
+    $dbPort = $databaseUrl['port'];
+    $dbName = substr($databaseUrl['path'], 1);
+    $dbUser = $databaseUrl['user'];
+    $dbPassword = $databaseUrl['pass'];
+}
+
+$redisHost = env('REDIS_HOST', '127.0.0.1');
+$redisPort = env('REDIS_PORT', 6379);
+$redisPassword = env('REDIS_PASSWORD', null);
+
+if (env('REDIS_URL')) {
+    $redisUrl = parse_url(env('REDIS_URL'));
+
+    $redisHost = $redisUrl['host'];
+    $redisPort = $redisUrl['port'];
+    $redisPassword = $redisUrl['pass'];
+}
 
 return [
 
