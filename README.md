@@ -1,4 +1,11 @@
-# Screenshots:
+This is a laravel bookstore website where a person can search and order A-level books. It has functionality like search, filter, cart, checkout, order, etc
+
+## Technologies used:
+1. HTML5, CSS, Bootstrap and Jquery
+2. Laravel
+3. Mysql
+
+## Screenshots:
 ### 1. Home Page
 <img src="https://raw.githubusercontent.com/Deepakolee785/laravel-lumos-bookstore/master/screenshots/Lumos%20Home.png" alt="Home page"/>
 
